@@ -1,0 +1,68 @@
+.content-panel-wrapper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.content-panel{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 65%;
+    min-height: 200px ;
+    border-radius: 20px 0 0 0 ;
+    margin-top: 30px;
+    padding: 50px 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.panel-logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 2px;
+}
+.panel-logo img{
+    height: 100%;
+}
+.panel-header{
+    position: absolute;
+    top: -15px;
+    right: 0;
+    transform: skew(-20deg);
+    font-size: 20px;
+    font-weight: 900;
+    padding: 5px;
+    box-shadow: 5px 5px 3px 0px rgba(128, 128, 128, 0.555);
+
+}
+.content-text{
+    border-top: 1px solid;
+    padding-top: 20px;
+    margin-top: 5px;
+    font-weight: 900;
+}
+.certificate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:20px ;
+}
+.content-text img{
+    width: 80%;
+}
+.contact-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.contact-wrapper .badge-wrapper{
+    margin: 25px;
+    width: 70px;
+    height: 70px;
+}

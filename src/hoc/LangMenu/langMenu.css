@@ -1,0 +1,20 @@
+
+.lang-menu-wrapper{
+    display:none;
+    position: fixed;
+    top:235px;
+    left:-105px;
+    flex-flow: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+.lang-menu-wrapper:hover{
+    transform:translateX(60%) ;
+}
+
+@media only screen and (min-width: 1100px) {
+    .lang-menu-wrapper{
+        display: flex;
+        top: 275px;
+    }
+  }

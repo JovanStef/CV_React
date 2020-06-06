@@ -1,0 +1,46 @@
+.menu-desktop {
+    display: none;
+}
+
+.menu-mobile{
+    display: none;
+    position: fixed;
+    top:235px;
+    right:-105px;
+    flex-flow: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+.menu-mobile:hover{
+    transform:translateX(-60%) ;
+}
+
+@media only screen and (min-width: 1100px) {
+    .menu-mobile{
+        display: none;
+    }
+     .menu-desktop{
+         position: absolute;
+        display: flex;
+        width: 50%;
+        font-size: 20px;
+        top:14px;
+        left:20%;
+        justify-content: space-evenly;
+    }
+    div[class^="menu-item"]{
+        text-align: center;
+    }
+    
+    div[class^="menu-item"] img{
+        display:none;
+    }
+
+
+  }
+
+
+
+
+
+

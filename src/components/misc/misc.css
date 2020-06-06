@@ -1,0 +1,19 @@
+.misc-container{
+    display: none;
+    position: fixed;
+    top:530px;
+    right:-105px;
+    flex-flow: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+.misc-container:hover{
+    transform:translateX(-60%) ;
+}
+
+@media only screen and (min-width: 1025px) {
+    .misc-container{
+        top: 500px;
+     display: flex;   
+    }
+  }
