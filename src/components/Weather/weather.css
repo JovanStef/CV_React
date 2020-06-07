@@ -38,7 +38,7 @@
 }
 .weather-container button{
     background-color: white;
-    padding:10px 20px;
+    padding:4px 20px;
     border-radius:5px ;
     margin-left: 5px;
 }
@@ -58,4 +58,11 @@
     border-radius:20px ;
     font-weight: 900;
     cursor: pointer;
+}
+
+.weather-container .err{
+    font-size: 15px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
 }

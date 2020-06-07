@@ -11,6 +11,7 @@ import { MenuMobile } from '../../components/Header/Menu/menu';
 import Misc from '../../components/misc/misc';
 import ContentPanelWrapper from '../Content-panel/contentPanelWrapper';
 import Weather from '../../components/Weather/weather';
+import UnitConv from '../../components/UnitConverter/unitConverter';
 
 class Layout extends Component {
 
@@ -50,7 +51,8 @@ class Layout extends Component {
         weather:{
             temp:'',
             icon:'',
-            city:''
+            city:'',
+            change:false
         }
 
     }
@@ -111,7 +113,17 @@ class Layout extends Component {
                 weather:{
                     temp:Math.floor(data.main.temp),
                     icon:data.weather[0].icon,
-                    city:data.name
+                    city:data.name,
+                    change:true
+                }
+            })
+        }).catch((e)=>{
+
+            let oldState={...this.state.weather}
+            this.setState({
+                weather:{
+                    ...oldState,
+                    change:false
                 }
             })
         })
@@ -155,6 +167,7 @@ class Layout extends Component {
                     <Misc colorMode={this.toggleColorMode} data={this.state.data} handler={this.weatherHandler}/>
                     <ContentPanelWrapper colorMode={this.toggleColorMode} data={this.state.data} contentIcons={this.state.contentIcons}loadDB={this.loadDB} />
                     <Weather colorMode={this.toggleColorMode} data={this.state.weather} currentCity={this.state.data.background} handler={this.weatherHandler}/>
+                    <UnitConv/>
                 </div>
             </div>
         )
