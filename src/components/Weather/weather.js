@@ -13,11 +13,10 @@ function Weather(props) {
         document.querySelector('.weather-container input').value=''
         return input
     }
-  
-    
     return (
         <div className={"screen-weather"}>
             <div className={"weather-container"} style={{ background: colors.dark, borderColor: colors.light, color: colors.light }}>
+            <h1>{'weather'}</h1>
                 <div className="close" onClick={() => closeWeather()}>X</div>
                 <img alt="weather-icon" src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`}/>
                 <h3>{props.data.temp} C</h3>

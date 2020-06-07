@@ -16,11 +16,16 @@ const Misc=(props)=> {
         document.querySelector('.screen-weather').style.display = 'flex';
         props.handler(props.data.background)
     }
+     let showUnit =()=>{
+        
+            document.querySelector('.screen-conv').style.display='flex'
+        
+     }
 
     return (
         <div className="misc-container">
             <div onClick={()=>showWeather()} ><Thumbnails  colors={props.colorMode()} data={weather} imgType={'icons'} direction={'right'}/></div>
-            <Thumbnails  colors={props.colorMode()} data={unitConverter} imgType={'icons'} direction={'right'}/>
+            <div onClick={()=>showUnit()}><Thumbnails  colors={props.colorMode()} data={unitConverter} imgType={'icons'} direction={'right'}/></div>
         </div>
     )
 }
